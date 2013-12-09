@@ -9,6 +9,9 @@ class IndexController extends AbstractActionController
 {
     public function indexAction()
     {
-        return new ViewModel();
+        /** @var $em \Doctrine\ORM\EntityManager */
+        $em = $this->getServiceLocator()->get('Doctrine\ORM\EntityManager');
+        $users = $em->getRepository('SONUser\Entity\User')->findAll();
+        return new ViewModel(array('users' => $users));
     }
 }

@@ -1,1 +1,7 @@
 <h3>Ola SON</h3>
+
+<?php foreach($users as $user): ?>
+<ul>
+    <li><?php echo $user->getNome(); ?></li>
+</ul>
+<?php endforeach; ?>
