@@ -1,0 +1,15 @@
+<section class="register">
+    <h2>Login</h2>
+    <?php if($this->error): ?>
+    <p class="error">Havia um ou mais isues com o seu envio. Corrija-os como indicado abaixo.</p>
+    <?php endif; ?>
+    <?php 
+    $form = $this->form;
+    $form->prepare();
+    $form->setAttribute('action', $this->url(NULL, array('controller' => 'Login', 'action' => 'process')));
+    $form->setAttribute('method', 'post');
+    
+    echo $this->form()->openTag($form);
+    ?>
+</section>
+
