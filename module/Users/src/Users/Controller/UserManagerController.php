@@ -21,6 +21,7 @@ class UserManagerController extends AbstractActionController
         $userTable = $this->getServiceLocator()->get('UserTable');
         $user = $userTable->getUser($this->params()->fromRoute('id'));
         $form = $this->getServiceLocator()->get('UserEditForm');
+        //print_r($user);die;
         $form->bind($user);
         $viewModel = new ViewModel(array(
             'form' => $form,

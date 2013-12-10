@@ -24,8 +24,10 @@ use Users\Model\UserTable;
 
 use Users\Form\LoginForm;
 use Users\Form\RegisterForm;
+use Users\Form\UserEditForm;
 use Users\Form\LoginFilter;
 use Users\Form\RegisterFilter;
+use Users\Form\UserEditFilter;
 
 
 class Module implements AutoloaderProviderInterface
@@ -88,12 +90,20 @@ class Module implements AutoloaderProviderInterface
                     $form->setInputFilter($sm->get('RegisterFilter'));
                     return $form;
                 },
+                'UserEditForm' => function($sm){
+                        $form = new UserEditForm();
+                        $form->setInputFilter($sm->get('UserEditFilter'));
+                        return $form;
+                },
                 //Configuração dos filtros        
                 'LoginFilter' => function($sm){
                     return new LoginFilter();
                 },
                 'RegisterFilter' => function($sm){
                     return new RegisterFilter();
+                },
+                'UserEditFilter' => function($sm){
+                    return new UserEditFilter();
                 },
                 //Autenticacao de usuario
                 'AuthService' => function($sm){
