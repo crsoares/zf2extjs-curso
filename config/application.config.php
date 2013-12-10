@@ -5,6 +5,7 @@ return array(
         'Application',
         'SONUser',
         'Users',
+        'Helloworld',
         'DoctrineModule',
         'DoctrineORMModule'
     ),
