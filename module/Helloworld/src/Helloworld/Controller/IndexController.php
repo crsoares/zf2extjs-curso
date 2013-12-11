@@ -13,7 +13,7 @@ class IndexController extends AbstractActionController
     {
         $greeting = $this->greetingService->getGreeting();
         return new ViewModel(array(
-            'greeting' => $greeting
+            'greeting' => $greeting,
         ));
     }
     

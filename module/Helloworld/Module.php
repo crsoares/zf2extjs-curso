@@ -2,8 +2,26 @@
 
 namespace Helloworld;
 
+use Zend\ModuleManager\ModuleManager;
+use Zend\ModuleManager\ModuleEvent;
+//use Helloworld\View\Helper\DisplayCurrentDate;
+
 class Module
 {
+    public function init(ModuleManager $moduleManager)
+    {
+        $moduleManager->getEventManager()
+                      ->attach(
+                           ModuleEvent::EVENT_LOAD_MODULES_POST,
+                           array($this, 'onModulesPost')
+                        );
+    }
+    
+    public function onModulesPost()
+    {
+        //die('Módulos carregados!');
+    }
+    
     public function getConfig()
     {
         return include __DIR__ . '/config/module.config.php';
@@ -28,4 +46,12 @@ class Module
             )
         );
     }*/
+    public function getViewHelperConfig()
+    {
+        return array(
+            'invokables' => array(
+                'displayCurrentDate' => 'Helloworld\View\Helper\DisplayCurrentDate'
+            )
+        );
+    }
 }

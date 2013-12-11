@@ -45,6 +45,11 @@ return array(
         'invokables' => array(
             'greetingService' => 'Helloworld\Service\GreetingService'
         )
-    )
+    ),
+    /*'view_helpers' => array(
+        'invokables' => array(
+            'displayCurrentDate' => 'Helloworld\View\Helper\DisplayCurrentDate'
+        )
+    )*/
 );
 
