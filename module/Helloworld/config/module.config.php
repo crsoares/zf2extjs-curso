@@ -30,6 +30,10 @@ return array(
                             $serviceLocator->getServiceLocator()
                                            ->get('greetingService')
                         );
+                
+                /*$ev = new \Helloworld\Event\MyGetGreetingEventListenerAggregate();
+                
+                $ctr->setTeste($ev);*/
                 /*$ctr->setGreetingService(
                             $serviceLocator->get('greetingService')
                         );*/
@@ -42,8 +46,12 @@ return array(
         )*/
     ),
     'service_manager' => array(
+        'factories' => array(
+            'greetingService' => 'Helloworld\Service\GreetingServiceFactory'
+        ),
         'invokables' => array(
-            'greetingService' => 'Helloworld\Service\GreetingService'
+            //'greetingService' => 'Helloworld\Service\GreetingService',
+            'loggingService' => 'Helloworld\Service\LoggingService'
         )
     ),
     /*'view_helpers' => array(

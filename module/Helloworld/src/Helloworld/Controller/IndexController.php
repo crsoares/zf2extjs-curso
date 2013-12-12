@@ -8,6 +8,7 @@ use Zend\View\Model\ViewModel;
 class IndexController extends AbstractActionController 
 {
     private $greetingService;
+    //private $eventManager;
     
     public function indexAction()
     {

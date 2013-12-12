@@ -41,6 +41,9 @@ class Module
     /*public function getServiceConfig()
     {
         return array(
+            'factories' => array(
+            'greetingService' => 'Helloworld\Service\GreetingServiceFactory'
+        ),
             'invokables' => array(
                 'greetingService' => 'Helloworld\Service\GreetingService'
             )
