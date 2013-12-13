@@ -10,11 +10,22 @@ class Module
 {
     public function init(ModuleManager $moduleManager)
     {
-        $moduleManager->getEventManager()
+        /*$moduleManager->getEventManager()
                       ->attach(
                            ModuleEvent::EVENT_LOAD_MODULES_POST,
                            array($this, 'onModulesPost')
-                        );
+                        );*/
+        $sharedEvents = $moduleManager->getEventManager()
+                                      ->getSharedManager();
+        $sharedEvents->attach(
+                    __NAMESPACE__,
+                    'dispatch',
+                    function($e) {
+                        $controller = $e->getTarget();
+                        $controller->layout('layout/helloWorldLayout');
+                    },
+                    100
+                );
     }
     
     public function onModulesPost()
