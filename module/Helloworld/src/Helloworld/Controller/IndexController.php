@@ -12,10 +12,16 @@ class IndexController extends AbstractActionController
     
     public function indexAction()
     {
+        $widget = $this->forward()
+                       ->dispatch('Helloworld\Controller\Widget');
         $greeting = $this->greetingService->getGreeting();
-        return new ViewModel(array(
+        $page = new ViewModel(array(
             'greeting' => $greeting,
+            'data' => $this->currentDate()
         ));
+        
+        $page->addChild($widget, 'widgetContent');
+        return $page;
     }
     
     public function setGreetingService($greetingService)

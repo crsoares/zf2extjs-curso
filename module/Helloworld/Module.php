@@ -22,7 +22,7 @@ class Module
                     'dispatch',
                     function($e) {
                         $controller = $e->getTarget();
-                        $controller->layout('layout/helloWorldLayout');
+                        //$controller->layout('layout/helloWorldLayout');
                     },
                     100
                 );
@@ -65,6 +65,15 @@ class Module
         return array(
             'invokables' => array(
                 'displayCurrentDate' => 'Helloworld\View\Helper\DisplayCurrentDate'
+            )
+        );
+    }
+    
+    public function getControllerPluginConfig()
+    {
+        return array(
+            'invokables' => array(
+                'currentDate' => 'Helloworld\Controller\Plugin\CurrentDate'
             )
         );
     }

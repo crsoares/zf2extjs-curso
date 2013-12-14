@@ -40,10 +40,11 @@ return array(
                 return $ctr;
             }
             //'Helloworld\Controller\Index' => 'Helloworld\Controller\IndexControllerFactory'
+        ),
+        'invokables' => array(
+            //'Helloworld\Controller\Index' => 'Helloworld\Controller\IndexController',
+            'Helloworld\Controller\Widget' => 'Helloworld\Controller\WidgetController'
         )
-        /*'invokables' => array(
-            'Helloworld\Controller\Index' => 'Helloworld\Controller\IndexController'
-        )*/
     ),
     'service_manager' => array(
         'factories' => array(

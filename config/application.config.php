@@ -6,6 +6,7 @@ return array(
         'SONUser',
         'Users',
         'Helloworld',
+        'HelloworldMod',
         'DoctrineModule',
         'DoctrineORMModule'
     ),
