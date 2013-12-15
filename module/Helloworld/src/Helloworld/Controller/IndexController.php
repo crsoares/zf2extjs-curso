@@ -5,6 +5,8 @@ namespace Helloworld\Controller;
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
 
+use Helloworld\Service\GreetingService;
+
 class IndexController extends AbstractActionController 
 {
     private $greetingService;
@@ -24,7 +26,7 @@ class IndexController extends AbstractActionController
         return $page;
     }
     
-    public function setGreetingService($greetingService)
+    public function setGreetingService(GreetingService $greetingService)
     {
         $this->greetingService = $greetingService;
     }

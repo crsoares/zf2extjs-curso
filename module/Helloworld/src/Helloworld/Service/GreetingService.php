@@ -9,11 +9,14 @@ use Zend\EventManager\Event;
 class GreetingService implements EventManagerAwareInterface
 {
     private $eventManager;
+    private $loggingService;
     
     public function getGreeting()
     {
-        $this->eventManager->addIdentifiers('GreetingService');
-        $this->eventManager->trigger('getGreeting');
+        //$this->eventManager->addIdentifiers('GreetingService');
+        //$this->eventManager->trigger('getGreeting');
+        
+        $this->loggingService->log('GetGreeting executado!');
         
         if(date('H') <= 11) {
             return "Bom dia, mundo!";
@@ -22,6 +25,16 @@ class GreetingService implements EventManagerAwareInterface
         }else {
             return "Boa noite, mundo!";
         }
+    }
+    
+    public function setLoggingService(LoggingServiceInterface $loggingService)
+    {
+        $this->loggingService = $loggingService;
+    }
+    
+    public function getLoggingService()
+    {
+        return $this->loggingService;
     }
     
     public function getEventManager()

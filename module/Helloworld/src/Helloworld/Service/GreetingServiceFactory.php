@@ -22,7 +22,9 @@ class GreetingServiceFactory implements FactoryInterface
                                                        ->onGetGreeting($e);
                                     }
                                 );*/
-        $serviceLocator->get('sharedEventManager')
+        
+        
+        /*$serviceLocator->get('sharedEventManager')
                        ->attach(
                                'GreetingService',
                                'getGreeting',
@@ -32,6 +34,29 @@ class GreetingServiceFactory implements FactoryInterface
                                }
                          );
         $greetingService = new GreetingService();
+        return $greetingService;*/
+        
+        
+        $di = new \Zend\Di\Di();
+        $di->configure(new \Zend\Di\Config(array(
+            'definition' => array(
+                'class' => array(
+                    'Helloworld\Service\GreetingService' => array(
+                        'setLoggingService' => array(
+                            'required' => true
+                        )
+                    )
+                )
+            ),
+            'instance' => array(
+                'preferences' => array(
+                    'Helloworld\Service\LoggingServiceInterface'
+                                => 'Helloworld\Service\LoggingService'
+                )
+            )
+        )));
+        
+        $greetingService = $di->get('Helloworld\Service\GreetingService');
         return $greetingService;
     }
 }
