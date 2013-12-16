@@ -79,7 +79,7 @@ return array(
             //'greetingService' => 'Helloworld\Service\GreetingServiceFactory',
             'Zend\Db\Adapter\Adapter' => function($sm) {
                 $config = $sm->get('Config');
-                $dbParams = $config['dbParams'];
+                //$dbParams = $config['dbParams'];
                 
                 return new Zend\Db\Adapter\Adapter(array(
                    'driver' => 'Pdo_Mysql',

@@ -14,6 +14,12 @@ class IndexController extends AbstractActionController
     
     public function indexAction()
     {
+        $adapter = $this->getServiceLocator()
+                        ->get('Zend\Db\Adapter\Adapter');
+        $mapper = new \Helloworld\Mapper\Host($adapter);
+        $host = $mapper->findById('127.0.0.1');
+        //echo $host->getIp();die;
+        print_r($host->current());die;
         $widget = $this->forward()
                        ->dispatch('Helloworld\Controller\Widget');
         $greeting = $this->greetingService->getGreeting();
