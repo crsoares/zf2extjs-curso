@@ -6,6 +6,8 @@ use Helloworld\Entity\Host as HostEntity;
 use Zend\Stdlib\Hydrator\HydratorInterface;
 use Zend\Db\TableGateway\TableGateway;
 use Zend\Db\TableGateway\Feature\RowGatewayFeature;
+use Zend\Db\Sql\Sql;
+use Zend\Db\Sql\Insert;
 
 class Host extends TableGateway
 {
@@ -33,5 +35,18 @@ class Host extends TableGateway
                     $this->entityPrototype
                 );
         return $hosts->initialize($results->toArray());
+    }
+    
+    public function insert($entity)
+    {
+        return parent::insert($this->hydrator->extract($entity));
+    }
+    
+    public function updateEntity($entity)
+    {
+        return parent::update(
+                    $this->hydrator->extract($entity),
+                    $this->idCol . "=" . $entity->getId()
+                );
     }
 }

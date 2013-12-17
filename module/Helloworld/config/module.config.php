@@ -96,7 +96,10 @@ return array(
                     'password' => $dbParams['password'],
                     'hostname' => $dbParams['hotname']
                 ));*/
-            }
+            },
+            'Helloworld\Mapper\Host' => function($sm) {
+                return new \Helloworld\Mapper\Host($sm->get('Zend\Db\Adapter\Adapter'));
+            }        
         ),
         /*'invokables' => array(
             //'greetingService' => 'Helloworld\Service\GreetingService',
