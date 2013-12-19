@@ -14,6 +14,22 @@ class IndexController extends AbstractActionController
     
     public function indexAction()
     {
+        /*
+         * Validadores
+         */
+        $validator = new \Zend\Validator\Isbn();
+        $validator->setMessage(
+                    "Um valor string ou inteiro deve ser dada!",
+                    \Zend\Validator\Isbn::INVALID
+                );
+        
+        if($validator->isValid("12,13")) {
+            echo "passou";
+        }else {
+            foreach($validator->getMessages() as $messageId => $message) {
+                echo $message;
+            }
+        }
         /*$host = $this->getServiceLocator()
                      ->get('Helloworld\Mapper\Host')
                      ->findById('127.0.0.1');
