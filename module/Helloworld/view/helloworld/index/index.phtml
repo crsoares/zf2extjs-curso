@@ -1,2 +1,13 @@
-<h1><?php echo $this->greeting . " " . $this->displayCurrentDate() . " " . $this->data; ?></h1>
-<h1><?php echo $this->widgetContent; ?></h1>
+<?php
+
+$form = $this->form;
+$form->prepare();
+//$this->form->setAttribute('action', "/teste");
+echo $this->form()->openTag($form);
+echo $this->formRow($form->get('name'));
+//echo $this->formElementErrors($form->get('name'));
+echo $this->formRow($form->get('email'));
+echo $this->formSubmit($form->get('submit'));
+echo $this->form()->closeTag();
+
+?>

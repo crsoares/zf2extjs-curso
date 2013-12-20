@@ -4,7 +4,7 @@ namespace HelloworldMod;
 
 class Module
 {
-    /*public function getConfig()
+    public function getConfig()
     {
         return array(
             'router' => array(
@@ -24,5 +24,5 @@ class Module
                 )
             )
         );
-    }*/
+    }
 }
