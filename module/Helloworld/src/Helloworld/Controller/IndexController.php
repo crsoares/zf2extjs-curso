@@ -16,11 +16,18 @@ class IndexController extends AbstractActionController
     public function indexAction()
     {
         $form = new SingUp();
+        $form->setHydrator(new \Zend\Stdlib\Hydrator\Reflection());
+        $form->bind(new \Helloworld\Entity\User());
+        
+        
         if($this->getRequest()->isPost()) {
             $form->setData($this->getRequest()->getPost());
             
             if($form->isValid()) {
                 var_dump($form->getData());
+                return new ViewModel(array(
+                    'form' => $form
+                ));
             }else {
                 return new ViewModel(array(
                     'form' => $form
