@@ -54,6 +54,16 @@ return array(
                         'action' => 'index'
                     )
                 )
+            ),
+            'login' => array(
+                'type' => 'Literal',
+                'options' => array(
+                    'route' => '/login',
+                    'defaults' => array(
+                        'controller' => 'Helloworld\Controller\Auth',
+                        'action' => 'login'
+                    )
+                )
             )
         )
     ),
@@ -68,6 +78,7 @@ return array(
                 return $ctr;
             }*/
             //'Helloworld\Controller\Index' => 'Helloworld\Controller\IndexControllerFactory'
+            'Helloworld\Controller\Auth' => 'Helloworld\Controller\AuthControllerFactory'
         ),
         'invokables' => array(
             //'Helloworld\Controller\Index' => 'Helloworld\Controller\IndexController',
@@ -83,7 +94,7 @@ return array(
                 
                 return new Zend\Db\Adapter\Adapter(array(
                    'driver' => 'Pdo_Mysql',
-                    'database' => 'app',
+                    'database' => 'foo',
                     'username' => 'root',
                     'password' => ''
                 ));
@@ -96,6 +107,11 @@ return array(
                     'password' => $dbParams['password'],
                     'hostname' => $dbParams['hotname']
                 ));*/
+            },
+            'AuthServiceFactory' => 'Helloworld\Service\AuthServiceFactory',
+            'Helloworld\Service\AuthService' => function($sm) {
+                $authServiceFactory = $sm->get('AuthServiceFactory');
+                return $authServiceFactory;
             },
             'Helloworld\Mapper\Host' => function($sm) {
                 return new \Helloworld\Mapper\Host($sm->get('Zend\Db\Adapter\Adapter'));

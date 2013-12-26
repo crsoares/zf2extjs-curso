@@ -1,0 +1,14 @@
+<?php
+if($this->loginSuccess) {
+    echo "Ola, " . $this->userLoggedIn . "!";
+}else {
+    if($this->loginError) {
+        echo "As credenciais fornecidas sao invalidas.";
+    }
+    $this->form->prepare();
+    echo $this->form()->openTag($this->form);
+    echo $this->formRow($this->form->get('username'));
+    echo $this->formRow($this->form->get('password'));
+    echo $this->formRow($this->form->get('submit'));
+    echo $this->form()->closeTag();
+}
