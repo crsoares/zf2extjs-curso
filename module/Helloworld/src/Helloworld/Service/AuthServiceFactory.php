@@ -4,7 +4,8 @@ namespace Helloworld\Service;
 
 use Zend\ServiceManager\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
-use Zend\Authentication\Storage\NonPersistent;
+//use Zend\Authentication\Storage\NonPersistent;
+use Zend\Authentication\Storage\Session;
 use Zend\Authentication\Adapter\DbTable;
 
 class AuthServiceFactory implements FactoryInterface
@@ -18,7 +19,8 @@ class AuthServiceFactory implements FactoryInterface
         $dbAdapter = $serviceLocator->get('Zend\Db\Adapter\Adapter');
         
         $service = new \Zend\Authentication\AuthenticationService(
-                    new NonPersistent(),
+                    //new NonPersistent(),
+                    new Session(),
                     new DbTable($dbAdapter, self::TABLE_NAME, self::IDENTITY_COLUMN, self::CREDENTIAL_COLUMN, 'md5(?)')
                 );
         return $service;

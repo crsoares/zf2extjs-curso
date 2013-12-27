@@ -55,5 +55,8 @@ return array(
                 )
             )
         )
+    ),
+    'data-fixture' => array(
+        'SONUser_fixture' => __DIR__ . '/../src/SONUser/Fixture'
     )
 );

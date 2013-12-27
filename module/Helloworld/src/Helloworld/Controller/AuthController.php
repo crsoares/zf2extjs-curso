@@ -12,6 +12,13 @@ class AuthController extends AbstractActionController
     
     public function loginAction()
     {
+        if($this->authService->hasIdentity()) {
+            return new ViewModel(array(
+                'loginSuccess' => true,
+                'userLoggedIn' => $this->authService->getIdentity()
+            ));
+        }
+        
         if(!$this->loginForm) {
             throw new \BadMethodCallException("Login Form ainda não definido!");
         }
@@ -53,6 +60,13 @@ class AuthController extends AbstractActionController
                 'form' => $this->loginForm 
             ));
         }
+    }
+    
+    public function logoutAction()
+    {
+        if($this->authService->hasIdentity())
+            $this->authService->clearIdentity();
+        $this->redirect()->toUrl('/login');
     }
     
     public function setLoginForm($loginForm)
