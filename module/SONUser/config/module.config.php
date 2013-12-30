@@ -15,13 +15,29 @@ return array(
                         'action'     => 'index'
                     )
                 )
+            ),
+            
+            'sonuser-admin' => array(
+                'type' => 'Segment',
+                'options' => array(
+                    'route' => '/admin/[:controller[/][:action[/][:id[/]]]]',
+                    'defaults' => array(
+                        'controller' => 'users',
+                        'action' => 'index',
+                    ),
+                    'constraints' => array(
+                        'controller' => '[a-zA-Z][a-zA-Z0-9_-]*',
+                        'action' => '[a-zA-Z][a-zA-Z0-9_-]*',
+                    )
+                )
             )
         )
     ),
     
     'controllers' => array(
         'invokables' => array(
-            'SONUser\Controller\Index' => 'SONUser\Controller\IndexController'
+            'SONUser\Controller\Index' => 'SONUser\Controller\IndexController',
+            'users' => 'SONUser\Controller\UsersController',
         )
     ),
     

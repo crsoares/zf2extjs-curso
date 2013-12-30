@@ -4,6 +4,8 @@ namespace SONUser\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
+use Zend\Stdlib\Hydrator\ClassMethods;
+
 /**
  * @ORM\Entity
  * @ORM\Table(name="users")
@@ -67,7 +69,7 @@ class User
         $this->salt = base_convert(sha1(uniqid(mt_rand(), true)), 16, 36);
         $this->createdAt = new \Datetime("now");
         $this->updatedAt = new \Datetime("now");
-        $this->activationKey = shar1($this->email.$this->salt);
+        $this->activationKey = sha1($this->email.$this->salt);
         $this->token = base_convert(sha1(uniqid(mt_rand(), true)), 16, 36);
         
     }
@@ -169,6 +171,17 @@ class User
     public function getUpdatedAt()
     {
         return $this->updatedAt;
+    }
+    
+    public function toArray()
+    {
+        /*$hydrator = new ClassMethods();
+        return $hydrator->extract($this);*/
+        
+        /*
+         * Esta linha logo abaixo equivale as duas de cima
+         */
+        return (new ClassMethods)->extract($this);
     }
 
 

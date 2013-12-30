@@ -1,0 +1,24 @@
+<h3>Users</h3>
+
+<p><a href="<?php echo $this->url('sonuser-admin', array('controller' => 'users', 'action' => 'new')) ?>">Novo Usuario</a></p>
+
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Email</th>
+        <th>Ação</th>
+    </tr>
+    <?php foreach($this->data as $entity): ?>
+    <tr>
+        <td><?php echo $entity->getId(); ?></td>
+        <td><?php echo $entity->getNome(); ?></td>
+        <td><?php echo $entity->getEmail(); ?></td>
+        <td>
+            <a href="<?php echo $this->url('sonuser-admin', array('controller' => 'users', 'action' => 'edit', 'id' => $entity->getId())) ?>">
+                Editar
+            </a>
+        </td>
+    </tr>
+    <?php endforeach; ?>
+</table>
