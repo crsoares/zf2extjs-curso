@@ -126,6 +126,14 @@ return array(
         'invokables' => array(
             'displayCurrentDate' => 'Helloworld\View\Helper\DisplayCurrentDate'
         )
-    )*/
+    ),*/
+    'asset_manager' => array(
+        'resolver_configs' => array(
+            'paths' => array(
+                'Helloworld' => __DIR__ . '/../public'
+            )
+        )
+    )            
+       
 );
 

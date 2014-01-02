@@ -3,20 +3,20 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "1327209bebcf965020830c63272a25db",
+    "hash": "3e24c38c8768de06e567949da57a7101",
     "packages": [
         {
             "name": "doctrine/annotations",
-            "version": "v1.1.2",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/annotations.git",
-                "reference": "40db0c96985aab2822edbc4848b3bd2429e02670"
+                "reference": "a11349d39d85bef75a71bd69bd604ac4fb993f03"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/annotations/zipball/40db0c96985aab2822edbc4848b3bd2429e02670",
-                "reference": "40db0c96985aab2822edbc4848b3bd2429e02670",
+                "url": "https://api.github.com/repos/doctrine/annotations/zipball/a11349d39d85bef75a71bd69bd604ac4fb993f03",
+                "reference": "a11349d39d85bef75a71bd69bd604ac4fb993f03",
                 "shasum": ""
             },
             "require": {
@@ -29,7 +29,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0.x-dev"
+                    "dev-master": "1.2.x-dev"
                 }
             },
             "autoload": {
@@ -43,7 +43,7 @@
             ],
             "authors": [
                 {
-                    "name": "Jonathan Wage",
+                    "name": "Jonathan H. Wage",
                     "email": "jonwage@gmail.com",
                     "homepage": "http://www.jwage.com/",
                     "role": "Creator"
@@ -75,7 +75,7 @@
                 "docblock",
                 "parser"
             ],
-            "time": "2013-06-16 21:33:03"
+            "time": "2013-12-20 21:39:07"
         },
         {
             "name": "doctrine/cache",
@@ -83,12 +83,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/cache.git",
-                "reference": "ff36d4216fef8242c3d8ee97fceee977e3c9b9a6"
+                "reference": "36c4eee5051629524389da376ba270f15765e49f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/cache/zipball/ff36d4216fef8242c3d8ee97fceee977e3c9b9a6",
-                "reference": "ff36d4216fef8242c3d8ee97fceee977e3c9b9a6",
+                "url": "https://api.github.com/repos/doctrine/cache/zipball/36c4eee5051629524389da376ba270f15765e49f",
+                "reference": "36c4eee5051629524389da376ba270f15765e49f",
                 "shasum": ""
             },
             "require": {
@@ -149,7 +149,7 @@
                 "cache",
                 "caching"
             ],
-            "time": "2013-11-23 16:10:06"
+            "time": "2013-12-18 17:21:03"
         },
         {
             "name": "doctrine/collections",
@@ -157,12 +157,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/collections.git",
-                "reference": "bcb53776a096a0c64579cc8d8ec0db62f1109fbc"
+                "reference": "819871759a4d41dab244d358507bd27d0e8b1e33"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/collections/zipball/bcb53776a096a0c64579cc8d8ec0db62f1109fbc",
-                "reference": "bcb53776a096a0c64579cc8d8ec0db62f1109fbc",
+                "url": "https://api.github.com/repos/doctrine/collections/zipball/819871759a4d41dab244d358507bd27d0e8b1e33",
+                "reference": "819871759a4d41dab244d358507bd27d0e8b1e33",
                 "shasum": ""
             },
             "require": {
@@ -185,7 +185,7 @@
             ],
             "authors": [
                 {
-                    "name": "Jonathan H. Wage",
+                    "name": "Jonathan Wage",
                     "email": "jonwage@gmail.com",
                     "homepage": "http://www.jwage.com/",
                     "role": "Creator"
@@ -217,7 +217,7 @@
                 "collections",
                 "iterator"
             ],
-            "time": "2013-08-29 16:56:45"
+            "time": "2013-12-21 19:19:27"
         },
         {
             "name": "doctrine/common",
@@ -356,12 +356,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/dbal.git",
-                "reference": "c3448dc0a163becd5acb50199049996c53cade78"
+                "reference": "d08b11c7eaab4b0509752638b7d60d4b97bd94d4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/dbal/zipball/c3448dc0a163becd5acb50199049996c53cade78",
-                "reference": "c3448dc0a163becd5acb50199049996c53cade78",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/d08b11c7eaab4b0509752638b7d60d4b97bd94d4",
+                "reference": "d08b11c7eaab4b0509752638b7d60d4b97bd94d4",
                 "shasum": ""
             },
             "require": {
@@ -414,7 +414,7 @@
                 "persistence",
                 "queryobject"
             ],
-            "time": "2013-11-12 12:38:29"
+            "time": "2013-12-31 09:04:01"
         },
         {
             "name": "doctrine/doctrine-module",
@@ -422,12 +422,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/DoctrineModule.git",
-                "reference": "d5e9c0d218c7f5e58ab2c8adcb01469c12621988"
+                "reference": "dba2f4a4807e28b6b52eeab26da897bfdf9e3c92"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/DoctrineModule/zipball/d5e9c0d218c7f5e58ab2c8adcb01469c12621988",
-                "reference": "d5e9c0d218c7f5e58ab2c8adcb01469c12621988",
+                "url": "https://api.github.com/repos/doctrine/DoctrineModule/zipball/dba2f4a4807e28b6b52eeab26da897bfdf9e3c92",
+                "reference": "dba2f4a4807e28b6b52eeab26da897bfdf9e3c92",
                 "shasum": ""
             },
             "require": {
@@ -498,7 +498,7 @@
                 "module",
                 "zf2"
             ],
-            "time": "2013-12-03 12:03:55"
+            "time": "2013-12-20 01:14:12"
         },
         {
             "name": "doctrine/doctrine-orm-module",
@@ -506,12 +506,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/DoctrineORMModule.git",
-                "reference": "03daada0306c26b0a910e23e1a5291ef37b84804"
+                "reference": "7dcbaf04ef01895a64a9ab61b00970ca52f261db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/DoctrineORMModule/zipball/03daada0306c26b0a910e23e1a5291ef37b84804",
-                "reference": "03daada0306c26b0a910e23e1a5291ef37b84804",
+                "url": "https://api.github.com/repos/doctrine/DoctrineORMModule/zipball/7dcbaf04ef01895a64a9ab61b00970ca52f261db",
+                "reference": "7dcbaf04ef01895a64a9ab61b00970ca52f261db",
                 "shasum": ""
             },
             "require": {
@@ -581,7 +581,7 @@
                 "orm",
                 "zf2"
             ],
-            "time": "2013-12-01 10:40:53"
+            "time": "2013-12-30 10:20:12"
         },
         {
             "name": "doctrine/inflector",
@@ -589,12 +589,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/inflector.git",
-                "reference": "8b4b3ccec7aafc596e2fc1e593c9f2e78f939c8c"
+                "reference": "a81c334f2764b09e2f13a55cfd8fe3233946f728"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/inflector/zipball/8b4b3ccec7aafc596e2fc1e593c9f2e78f939c8c",
-                "reference": "8b4b3ccec7aafc596e2fc1e593c9f2e78f939c8c",
+                "url": "https://api.github.com/repos/doctrine/inflector/zipball/a81c334f2764b09e2f13a55cfd8fe3233946f728",
+                "reference": "a81c334f2764b09e2f13a55cfd8fe3233946f728",
                 "shasum": ""
             },
             "require": {
@@ -650,7 +650,7 @@
                 "singularize",
                 "string"
             ],
-            "time": "2013-04-10 16:14:30"
+            "time": "2013-12-21 19:19:50"
         },
         {
             "name": "doctrine/lexer",
@@ -658,12 +658,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/lexer.git",
-                "reference": "57d5a024b48709c56ce5bb93072948359220f36c"
+                "reference": "f12a5f74e5f4a9e3f558f3288504e121edfad891"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/lexer/zipball/57d5a024b48709c56ce5bb93072948359220f36c",
-                "reference": "57d5a024b48709c56ce5bb93072948359220f36c",
+                "url": "https://api.github.com/repos/doctrine/lexer/zipball/f12a5f74e5f4a9e3f558f3288504e121edfad891",
+                "reference": "f12a5f74e5f4a9e3f558f3288504e121edfad891",
                 "shasum": ""
             },
             "require": {
@@ -707,7 +707,7 @@
                 "lexer",
                 "parser"
             ],
-            "time": "2013-11-19 06:15:26"
+            "time": "2013-12-20 21:39:00"
         },
         {
             "name": "doctrine/orm",
@@ -715,12 +715,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/doctrine2.git",
-                "reference": "c4b7d3fbea7970ec1fd9ef0c258654be54763195"
+                "reference": "948686727982cc94d180b5f65b2c8641a818efd2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/doctrine2/zipball/c4b7d3fbea7970ec1fd9ef0c258654be54763195",
-                "reference": "c4b7d3fbea7970ec1fd9ef0c258654be54763195",
+                "url": "https://api.github.com/repos/doctrine/doctrine2/zipball/948686727982cc94d180b5f65b2c8641a818efd2",
+                "reference": "948686727982cc94d180b5f65b2c8641a818efd2",
                 "shasum": ""
             },
             "require": {
@@ -783,7 +783,7 @@
                 "database",
                 "orm"
             ],
-            "time": "2013-11-12 12:40:15"
+            "time": "2013-12-15 22:34:57"
         },
         {
             "name": "hounddog/doctrine-data-fixture-module",
@@ -840,18 +840,152 @@
             "time": "2013-12-16 16:58:27"
         },
         {
+            "name": "kriswallsmith/assetic",
+            "version": "1.1.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kriswallsmith/assetic.git",
+                "reference": "1d671c54f147ece319642132330927672b6190a7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kriswallsmith/assetic/zipball/1d671c54f147ece319642132330927672b6190a7",
+                "reference": "1d671c54f147ece319642132330927672b6190a7",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.1",
+                "symfony/process": "~2.1"
+            },
+            "require-dev": {
+                "cssmin/cssmin": "*",
+                "joliclic/javascript-packer": "*",
+                "kamicane/packager": "*",
+                "leafo/lessphp": "*",
+                "leafo/scssphp": "*",
+                "leafo/scssphp-compass": "*",
+                "mrclay/minify": "*",
+                "phpunit/phpunit": "~3.7",
+                "ptachoire/cssembed": "*",
+                "twig/twig": "~1.6"
+            },
+            "suggest": {
+                "leafo/lessphp": "Assetic provides the integration with the lessphp LESS compiler",
+                "leafo/scssphp": "Assetic provides the integration with the scssphp SCSS compiler",
+                "leafo/scssphp-compass": "Assetic provides the integration with the SCSS compass plugin",
+                "ptachoire/cssembed": "Assetic provides the integration with phpcssembed to embed data uris",
+                "twig/twig": "Assetic provides the integration with the Twig templating engine"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Assetic": "src/"
+                },
+                "files": [
+                    "src/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kris Wallsmith",
+                    "email": "kris.wallsmith@gmail.com",
+                    "homepage": "http://kriswallsmith.net/"
+                }
+            ],
+            "description": "Asset Management for PHP",
+            "homepage": "https://github.com/kriswallsmith/assetic",
+            "keywords": [
+                "assets",
+                "compression",
+                "minification"
+            ],
+            "time": "2013-09-03 12:44:05"
+        },
+        {
+            "name": "rwoverdijk/assetmanager",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/RWOverdijk/AssetManager.git",
+                "reference": "ef5965c763dd0261d8516d6f9ab011c2fcc3e902"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/RWOverdijk/AssetManager/zipball/ef5965c763dd0261d8516d6f9ab011c2fcc3e902",
+                "reference": "ef5965c763dd0261d8516d6f9ab011c2fcc3e902",
+                "shasum": ""
+            },
+            "require": {
+                "kriswallsmith/assetic": "1.1.*",
+                "php": ">=5.3.3",
+                "zendframework/zend-config": "2.*",
+                "zendframework/zend-console": "2.*",
+                "zendframework/zend-eventmanager": "2.*",
+                "zendframework/zend-form": "2.*",
+                "zendframework/zend-http": "2.*",
+                "zendframework/zend-loader": "2.*",
+                "zendframework/zend-modulemanager": "2.*",
+                "zendframework/zend-mvc": "2.*",
+                "zendframework/zend-serializer": "2.*",
+                "zendframework/zend-servicemanager": "2.*",
+                "zendframework/zend-stdlib": "2.*",
+                "zendframework/zend-view": "2.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "AssetManager": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Marco Pivetta",
+                    "email": "ocramius@gmail.com",
+                    "homepage": "http://ocramius.github.com/",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Wesley Overdijk",
+                    "email": "r.w.overdijk@gmail.com",
+                    "homepage": "http://blog.spoonx.nl/"
+                }
+            ],
+            "description": "An assetmanager module for Zend Framework 2.",
+            "homepage": "https://github.com/RWOverdijk/AssetManager",
+            "keywords": [
+                "asset",
+                "asset manager",
+                "zend framework 2",
+                "zf2"
+            ],
+            "time": "2013-12-05 22:17:38"
+        },
+        {
             "name": "symfony/console",
             "version": "dev-master",
             "target-dir": "Symfony/Component/Console",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Console.git",
-                "reference": "ff8d5444c1b4dc7675aaeecd35f7ed1f0872c242"
+                "reference": "0afe517faecb1d3b397a0297d3f7d2cc39587230"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Console/zipball/ff8d5444c1b4dc7675aaeecd35f7ed1f0872c242",
-                "reference": "ff8d5444c1b4dc7675aaeecd35f7ed1f0872c242",
+                "url": "https://api.github.com/repos/symfony/Console/zipball/0afe517faecb1d3b397a0297d3f7d2cc39587230",
+                "reference": "0afe517faecb1d3b397a0297d3f7d2cc39587230",
                 "shasum": ""
             },
             "require": {
@@ -890,7 +1024,54 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "http://symfony.com",
-            "time": "2013-11-28 10:27:35"
+            "time": "2013-12-31 13:43:37"
+        },
+        {
+            "name": "symfony/process",
+            "version": "dev-master",
+            "target-dir": "Symfony/Component/Process",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/Process.git",
+                "reference": "a7fdd976ddea87a0354674eebf45251b4a8ce905"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/Process/zipball/a7fdd976ddea87a0354674eebf45251b4a8ce905",
+                "reference": "a7fdd976ddea87a0354674eebf45251b4a8ce905",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.5-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\Process\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Process Component",
+            "homepage": "http://symfony.com",
+            "time": "2013-12-29 14:45:01"
         },
         {
             "name": "zendframework/zendframework",
@@ -898,12 +1079,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zf2.git",
-                "reference": "d9c984b302f398d7669346db414d959a368b7415"
+                "reference": "9ff45735c699dde3d5f4b719e0b01c00c855c0e9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zf2/zipball/d9c984b302f398d7669346db414d959a368b7415",
-                "reference": "d9c984b302f398d7669346db414d959a368b7415",
+                "url": "https://api.github.com/repos/zendframework/zf2/zipball/9ff45735c699dde3d5f4b719e0b01c00c855c0e9",
+                "reference": "9ff45735c699dde3d5f4b719e0b01c00c855c0e9",
                 "shasum": ""
             },
             "require": {
@@ -1005,7 +1186,7 @@
                 "framework",
                 "zf2"
             ],
-            "time": "2013-12-06 15:47:38"
+            "time": "2013-12-16 12:03:10"
         },
         {
             "name": "zendframework/zftool",
@@ -1071,7 +1252,8 @@
         "doctrine/doctrine-module": 20,
         "doctrine/doctrine-orm-module": 20,
         "hounddog/doctrine-data-fixture-module": 20,
-        "zendframework/zftool": 20
+        "zendframework/zftool": 20,
+        "kriswallsmith/assetic": 20
     },
     "platform": {
         "php": ">=5.3.3"

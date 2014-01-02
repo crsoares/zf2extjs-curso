@@ -77,7 +77,7 @@ class UsersController extends AbstractActionController
             if($form->isValid()) {
                 $userService = $this->getServiceLocator()->get('SONUser\Service\User');
                 $result = $userService->update($form->getData());
-                echo 'akiii';die;
+                
                 if($result) {
                     return $this->redirect()->toRoute('sonuser-admin', array('controller' => 'users'));
                 }
@@ -85,6 +85,14 @@ class UsersController extends AbstractActionController
         }
         
         return new ViewModel(array('form' => $form));
+    }
+    
+    public function deleteAction()
+    {
+        $userService = $this->getServiceLocator()->get('SONUser\Service\User');
+        if($userService->delete($this->params()->fromRoute('id', 0))) {
+            return $this->redirect()->toRoute('sonuser-admin', array('controller' => 'users'));
+        }
     }
     
     /**

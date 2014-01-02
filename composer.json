@@ -14,6 +14,8 @@
         "doctrine/doctrine-module": "0.8.x-dev",
         "doctrine/doctrine-orm-module": "dev-master",
         "hounddog/doctrine-data-fixture-module": "dev-master",
-        "zendframework/zftool": "dev-master"
+        "zendframework/zftool": "dev-master",
+        "rwoverdijk/assetmanager": "*", 
+        "kriswallsmith/assetic": "1.1.*@dev"
     }
 }

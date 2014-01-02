@@ -15,8 +15,11 @@
         <td><?php echo $entity->getNome(); ?></td>
         <td><?php echo $entity->getEmail(); ?></td>
         <td>
-            <a href="<?php echo $this->url('sonuser-admin', array('controller' => 'users', 'action' => 'edit', 'id' => $entity->getId())) ?>">
+            <a href="<?php echo $this->url('sonuser-admin', array('controller' => 'users', 'action' => 'edit', 'id' => $entity->getId())); ?>">
                 Editar
+            </a> |
+            <a href="<?php echo $this->url('sonuser-admin', array('controller' => 'users', 'action' => 'delete', 'id' => $entity->getId())); ?>">
+                Deletar
             </a>
         </td>
     </tr>
