@@ -4,7 +4,7 @@ namespace Users\Form;
 
 use Zend\InputFilter\InputFilter;
 
-class RegisterFilter extends InputFilter
+class RegisterFilter extends InputFilter 
 {
     public function __construct()
     {
@@ -25,9 +25,7 @@ class RegisterFilter extends InputFilter
             'name' => 'name',
             'required' => true,
             'filters' => array(
-                array(
-                    'name' => 'StripTags'
-                )
+                array('name' => 'StripTags'),
             ),
             'validators' => array(
                 array(
@@ -43,13 +41,12 @@ class RegisterFilter extends InputFilter
         
         $this->add(array(
             'name' => 'password',
-            'required' => true
+            'required' => true,
         ));
         
         $this->add(array(
             'name' => 'confirm_password',
-            'required' => true
+            'required' => true,
         ));
-        
     }
 }

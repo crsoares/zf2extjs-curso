@@ -5,13 +5,14 @@ namespace Users\Controller;
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
 
-use Users\Model\User;
+use Users\Form\RegisterForm;
+use Users\Form\RegisterFilter;
 
-class RegisterController extends AbstractActionController
+class RegisterController extends AbstractActionController 
 {
     public function indexAction()
     {
-        $form = $this->getServiceLocator()->get('RegisterForm');
+        $form = new RegisterForm();
         $viewModel = new ViewModel(array(
             'form' => $form
         ));
@@ -28,40 +29,20 @@ class RegisterController extends AbstractActionController
     public function processAction()
     {
         if(!$this->request->isPost()) {
-            return $this->redirect()->toRoute(NULL,
-                        array(
-                            'controller' => 'register',
-                            'action' => 'index'
-                        )
-                    );
+            return $this->redirect()->toRoute(NULL, array('controller' => 'register', 'action' => 'index'));
         }
-        
         $post = $this->request->getPost();
-        $form = $this->getServiceLocator()->get('RegisterForm');
+        $form = new RegisterForm();
+        $form->setInputFilter(new RegisterFilter());
         $form->setData($post);
         if(!$form->isValid()) {
             $model = new ViewModel(array(
                 'error' => true,
-                'form' => $form
+                'form' => $form,
             ));
             $model->setTemplate('users/register/index');
             return $model;
         }
-        //Cria usuario
-        $this->createUser($form->getData());
-        
-        return $this->redirect()->toRoute(NULL, array(
-            'controller' => 'register',
-            'action' => 'confirm'
-        ));
-    }
-    
-    protected function createUser(array $data)
-    {
-        $user = new User();
-        $user->exchangeArray($data);
-        $userTable = $this->getServiceLocator()->get('UserTable');
-        $userTable->saveUser($user);
-        return true;
+        return $this->redirect()->toRoute(NULL, array('controller' => 'register', 'action' => 'confirm'));
     }
 }

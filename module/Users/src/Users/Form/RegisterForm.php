@@ -4,7 +4,7 @@ namespace Users\Form;
 
 use Zend\Form\Form;
 
-class RegisterForm extends Form
+class RegisterForm extends Form 
 {
     public function __construct()
     {
@@ -15,10 +15,10 @@ class RegisterForm extends Form
         $this->add(array(
             'name' => 'name',
             'attributes' => array(
-                'type' => 'text',
+                'type' => 'text'
             ),
             'options' => array(
-                'label' => 'Full Name'
+                'label' => 'Nome completo'
             )
         ));
         
@@ -40,7 +40,7 @@ class RegisterForm extends Form
                 array(
                     'name' => 'EmailAddress',
                     'options' => array(
-                        'messagens' => array(
+                        'messages' => array(
                             \Zend\Validator\EmailAddress::INVALID_FORMAT => 'Formato de endereço de e-mail é inválido'
                         )
                     )
@@ -51,28 +51,20 @@ class RegisterForm extends Form
         $this->add(array(
             'name' => 'password',
             'attributes' => array(
-                'type' => 'password',
-                'required' => 'required'
+                'type' => 'password'
             ),
             'options' => array(
-                'label' => 'Password'
-            ),
-            'validators' => array(
-                'messages' => 'Campo de preenchimento obrigatorio.'
+                'label' => 'Senha'
             )
         ));
         
         $this->add(array(
             'name' => 'confirm_password',
             'attributes' => array(
-                'type' => 'password',
-                'required' => 'required'
+                'type' => 'password'
             ),
             'options' => array(
-                'label' => 'Confirm Password'
-            ),
-            'validators' => array(
-                'messages' => 'Campo de preenchimento obrigatorio.'
+                'label' => 'Confirmar Senha'
             )
         ));
         
@@ -80,7 +72,7 @@ class RegisterForm extends Form
             'name' => 'submit',
             'attributes' => array(
                 'type' => 'submit',
-                'value' => 'Register'
+                'value' => 'Salvar'
             )
         ));
     }
