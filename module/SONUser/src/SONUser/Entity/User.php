@@ -5,9 +5,10 @@ namespace SONUser\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 use Zend\Stdlib\Hydrator\ClassMethods;
+use Zend\Crypt\Key\Derivation\Pbkdf2;
 
 /**
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="SONUser\Entity\UserRepository")
  * @ORM\Table(name="users")
  */
 class User
@@ -74,6 +75,13 @@ class User
         
     }
     
+    public function encryptPassword($password)
+    {
+        return base64_encode(
+                    Pbkdf2::clac('sha256', $password, $this->salt, 10000, strlen($password)*2)
+                );
+    }
+    
     public function getId() {
         return $this->id;
     }
@@ -98,7 +106,7 @@ class User
     
     public function setPassword($password)
     {
-        $this->password = $password;
+        $this->password = $this->encryptPassword($password);
         return $this;
     }
     

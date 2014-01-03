@@ -17,6 +17,18 @@ return array(
                 )
             ),
             
+            'sonuser-auth' => array(
+                'type' => 'Literal',
+                'options' => array(
+                    'route' => '/auth',
+                    'defaults' => array(
+                        '__NAMESPACE__' => 'SONUser\Controller',
+                        'controller' => 'Auth',
+                        'action' => 'index',
+                    )
+                )
+            ),
+            
             'sonuser-admin' => array(
                 'type' => 'Segment',
                 'options' => array(
@@ -38,6 +50,7 @@ return array(
         'invokables' => array(
             'SONUser\Controller\Index' => 'SONUser\Controller\IndexController',
             'users' => 'SONUser\Controller\UsersController',
+            'SONUser\Controller\Auth' => 'SONUser\Controller\AuthController'    
         )
     ),
     

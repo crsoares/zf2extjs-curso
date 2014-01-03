@@ -40,6 +40,10 @@ class Module
                     $em = $sm->get('Doctrine\ORM\EntityManager');
                     return new UserService($em);
                 },
+                'SONUser\Auth\Adapter' => function($sm) {
+                    $em = $sm->get('Doctrine\ORM\EntityManager');
+                    return new Auth\Adapter($em);
+                }
             )
         );
     }
