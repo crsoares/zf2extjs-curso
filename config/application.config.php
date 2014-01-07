@@ -10,7 +10,8 @@ return array(
         'DoctrineModule',
         'DoctrineORMModule',
         //'DoctrineDataFixtureModule',
-        //'AssetManager'
+        //'AssetManager',
+        'Estudo'
     ),
 
     // These are various options for the listeners attached to the ModuleManager
