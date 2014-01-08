@@ -157,12 +157,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/collections.git",
-                "reference": "819871759a4d41dab244d358507bd27d0e8b1e33"
+                "reference": "e6d8f1240e10f268c8e8c30e9e88a12853f84695"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/collections/zipball/819871759a4d41dab244d358507bd27d0e8b1e33",
-                "reference": "819871759a4d41dab244d358507bd27d0e8b1e33",
+                "url": "https://api.github.com/repos/doctrine/collections/zipball/e6d8f1240e10f268c8e8c30e9e88a12853f84695",
+                "reference": "e6d8f1240e10f268c8e8c30e9e88a12853f84695",
                 "shasum": ""
             },
             "require": {
@@ -217,7 +217,7 @@
                 "collections",
                 "iterator"
             ],
-            "time": "2013-12-21 19:19:27"
+            "time": "2014-01-01 23:58:38"
         },
         {
             "name": "doctrine/common",
@@ -356,12 +356,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/dbal.git",
-                "reference": "d08b11c7eaab4b0509752638b7d60d4b97bd94d4"
+                "reference": "1b90a2eb0868292a1f56eb49f7f1b0421e925123"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/dbal/zipball/d08b11c7eaab4b0509752638b7d60d4b97bd94d4",
-                "reference": "d08b11c7eaab4b0509752638b7d60d4b97bd94d4",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/1b90a2eb0868292a1f56eb49f7f1b0421e925123",
+                "reference": "1b90a2eb0868292a1f56eb49f7f1b0421e925123",
                 "shasum": ""
             },
             "require": {
@@ -414,7 +414,7 @@
                 "persistence",
                 "queryobject"
             ],
-            "time": "2013-12-31 09:04:01"
+            "time": "2014-01-05 09:00:29"
         },
         {
             "name": "doctrine/doctrine-module",
@@ -697,7 +697,7 @@
                 {
                     "name": "Johannes Schmitt",
                     "email": "schmittjoh@gmail.com",
-                    "homepage": "http://jmsyst.com",
+                    "homepage": "https://github.com/schmittjoh",
                     "role": "Developer of wrapped JMSSerializerBundle"
                 }
             ],
@@ -715,12 +715,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/doctrine2.git",
-                "reference": "948686727982cc94d180b5f65b2c8641a818efd2"
+                "reference": "7b8f09ee4afb2b0f73f0a5de265153a40cb1dede"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/doctrine2/zipball/948686727982cc94d180b5f65b2c8641a818efd2",
-                "reference": "948686727982cc94d180b5f65b2c8641a818efd2",
+                "url": "https://api.github.com/repos/doctrine/doctrine2/zipball/7b8f09ee4afb2b0f73f0a5de265153a40cb1dede",
+                "reference": "7b8f09ee4afb2b0f73f0a5de265153a40cb1dede",
                 "shasum": ""
             },
             "require": {
@@ -783,7 +783,7 @@
                 "database",
                 "orm"
             ],
-            "time": "2013-12-15 22:34:57"
+            "time": "2014-01-02 22:51:07"
         },
         {
             "name": "hounddog/doctrine-data-fixture-module",
@@ -980,12 +980,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Console.git",
-                "reference": "0afe517faecb1d3b397a0297d3f7d2cc39587230"
+                "reference": "62a18a52e66662bc4bf1edf0b9916b97caad3418"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Console/zipball/0afe517faecb1d3b397a0297d3f7d2cc39587230",
-                "reference": "0afe517faecb1d3b397a0297d3f7d2cc39587230",
+                "url": "https://api.github.com/repos/symfony/Console/zipball/62a18a52e66662bc4bf1edf0b9916b97caad3418",
+                "reference": "62a18a52e66662bc4bf1edf0b9916b97caad3418",
                 "shasum": ""
             },
             "require": {
@@ -1024,7 +1024,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "http://symfony.com",
-            "time": "2013-12-31 13:43:37"
+            "time": "2014-01-07 15:22:10"
         },
         {
             "name": "symfony/process",
@@ -1033,12 +1033,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Process.git",
-                "reference": "a7fdd976ddea87a0354674eebf45251b4a8ce905"
+                "reference": "d4b086ca4d6e192d8c2c64fe011159c8bc4c9daa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Process/zipball/a7fdd976ddea87a0354674eebf45251b4a8ce905",
-                "reference": "a7fdd976ddea87a0354674eebf45251b4a8ce905",
+                "url": "https://api.github.com/repos/symfony/Process/zipball/d4b086ca4d6e192d8c2c64fe011159c8bc4c9daa",
+                "reference": "d4b086ca4d6e192d8c2c64fe011159c8bc4c9daa",
                 "shasum": ""
             },
             "require": {
@@ -1071,7 +1071,7 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "http://symfony.com",
-            "time": "2013-12-29 14:45:01"
+            "time": "2014-01-07 13:29:57"
         },
         {
             "name": "zendframework/zendframework",
@@ -1079,12 +1079,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zf2.git",
-                "reference": "9ff45735c699dde3d5f4b719e0b01c00c855c0e9"
+                "reference": "4721eab46be97523e09dceb59b4ce6676fe0ba5e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zf2/zipball/9ff45735c699dde3d5f4b719e0b01c00c855c0e9",
-                "reference": "9ff45735c699dde3d5f4b719e0b01c00c855c0e9",
+                "url": "https://api.github.com/repos/zendframework/zf2/zipball/4721eab46be97523e09dceb59b4ce6676fe0ba5e",
+                "reference": "4721eab46be97523e09dceb59b4ce6676fe0ba5e",
                 "shasum": ""
             },
             "require": {
@@ -1186,7 +1186,7 @@
                 "framework",
                 "zf2"
             ],
-            "time": "2013-12-16 12:03:10"
+            "time": "2014-01-04 11:56:17"
         },
         {
             "name": "zendframework/zftool",
@@ -1194,12 +1194,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/ZFTool.git",
-                "reference": "2d35c9a1245c84578300e6615ef36e41fbc640ff"
+                "reference": "d73bf6f0ae6ce9b92acc72ecc8f336e2352f3ae0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/ZFTool/zipball/2d35c9a1245c84578300e6615ef36e41fbc640ff",
-                "reference": "2d35c9a1245c84578300e6615ef36e41fbc640ff",
+                "url": "https://api.github.com/repos/zendframework/ZFTool/zipball/d73bf6f0ae6ce9b92acc72ecc8f336e2352f3ae0",
+                "reference": "d73bf6f0ae6ce9b92acc72ecc8f336e2352f3ae0",
                 "shasum": ""
             },
             "require": {
@@ -1238,7 +1238,7 @@
                 "tool",
                 "zf2"
             ],
-            "time": "2013-11-20 21:37:15"
+            "time": "2014-01-02 17:29:50"
         }
     ],
     "packages-dev": [

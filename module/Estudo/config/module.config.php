@@ -5,7 +5,7 @@ namespace Estudo;
 return array(
     'router' => array(
         'routes' => array(
-            'estudo' => array(
+            'home' => array(
                 'type' => 'Literal',
                 'options' => array(
                     'route' => '/product',
@@ -44,14 +44,19 @@ return array(
             'estudo' => __DIR__ . '/../view',
         )
     ),
-    /*'doctrine' => array(
+    'doctrine' => array(
         'driver' => array(
             __NAMESPACE__ . '_driver' => array(
                 'class' => 'Doctrine\ORM\Mapping\Driver\AnnotationDriver',
                 'cache' => 'array',
-                'paths' => ''
+                'paths' => array(__DIR__ . '/../src/' . __NAMESPACE__ . '/Entity')
+            ),
+            'orm_default' => array(
+                'drivers' => array(
+                    __NAMESPACE__ . '\Entity' => __NAMESPACE__ . '_driver'
+                )
             )
         )
-    )*/
+    ),
 );
 

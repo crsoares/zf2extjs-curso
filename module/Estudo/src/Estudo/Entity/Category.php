@@ -22,6 +22,12 @@ class Category
      */
     protected $name;
     
+    /**
+     * @ORM\ManyToOne(targetEntity="Estudo\Entity\Product", inversedBy="categories", cascade={"persist"})
+     * @ORM\JoinColumn(name="products_id", referencedColumnName="id")
+     */
+    protected $products;
+    
     public function getId()
     {
         return $this->id;
@@ -36,5 +42,16 @@ class Category
     public function getName()
     {
         return $this->name;
+    }
+    
+    public function setProducts($products)
+    {
+        $this->products = $products;
+        return $this;
+    }
+    
+    public function getProducts()
+    {
+        return $this->products;
     }
 }

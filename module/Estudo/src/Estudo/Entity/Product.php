@@ -3,6 +3,7 @@
 namespace Estudo\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * @ORM\Entity
@@ -23,19 +24,24 @@ class Product
     protected $name;
     
     /**
-     * @ORM\Column(type="Float", nullable=true)
+     * @ORM\Column(type="float", nullable=true)
      */
     protected $price;
     
     /**
-     * @ORM\OneToOne(targetEntity="Entity\Brand")
+     * @ORM\OneToOne(targetEntity="Estudo\Entity\Brand", cascade={"persist"})
      */
     protected $brand;
     
     /**
-     * @ORM\ManyToOne(targetEntity="Entity\Category")
+     * @ORM\OneToMany(targetEntity="Estudo\Entity\Category", mappedBy="products", cascade={"persist"})
      */
     protected $categories;
+    
+    public function __construct()
+    {
+        $this->categories = new ArrayCollection();
+    }
     
     public function getId($id)
     {
