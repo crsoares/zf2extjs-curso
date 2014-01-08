@@ -13,7 +13,7 @@ echo $this->formCollection($product->get('categories'));
 $brand = $product->get('brand');
 
 echo $this->formRow($brand->get('name'));
-echo $this->formRow($brand->get('url'));
+//echo $this->formRow($brand->get('url'));
 
 echo $this->formHidden($form->get('csrf'));
 echo $this->formElement($form->get('submit'));
