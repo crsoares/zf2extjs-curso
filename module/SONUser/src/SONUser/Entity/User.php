@@ -78,7 +78,7 @@ class User
     public function encryptPassword($password)
     {
         return base64_encode(
-                    Pbkdf2::clac('sha256', $password, $this->salt, 10000, strlen($password)*2)
+                    Pbkdf2::calc('sha256', $password, $this->salt, 10000, strlen($password)*2)
                 );
     }
     

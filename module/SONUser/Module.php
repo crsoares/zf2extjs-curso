@@ -2,18 +2,42 @@
 
 namespace SONUser;
 
+use Zend\ModuleManager\ModuleManager;
 use Zend\Mvc\ModuleRouteListener;
 use Zend\Mvc\MvcEvent;
+
+use Zend\Authentication\AuthenticationService;
+use Zend\Authentication\Storage\Session as SessionStorage;
 
 use SONUser\Service\User as UserService;
 
 class Module
 {
-    public function onBootstrap(MvcEvent $e)
+    public function init(ModuleManager $moduleManager)
     {
-        $eventManager = $e->getApplication()->getEventManager();
-        $moduleRouteListener = new ModuleRouteListener();
-        $moduleRouteListener->attach($eventManager);
+        $sharedEvents = $moduleManager->getEventManager()->getSharedManager();
+        $sharedEvents->attach(
+                    'Zend\Mvc\Controller\AbstractActionController',
+                    MvcEvent::EVENT_DISPATCH,
+                    array($this, 'mvcPreDispatch'),
+                    90
+                );
+    }
+    
+    public function mvcPreDispatch($e)
+    {
+        $auth = new AuthenticationService();
+        $auth->setStorage(new SessionStorage());
+        
+        $controller = $e->getTarget();
+        
+        $matcheRoute = $controller->getEvent()
+                                  ->getRouteMatch()
+                                  ->getMatchedRouteName();
+        
+        if(!$auth->getIdentity() and $matcheRoute == 'sonuser-admin') {
+            return $controller->redirect()->toRoute('sonuser-auth');
+        }
     }
     
     public function getConfig()

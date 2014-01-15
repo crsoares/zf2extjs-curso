@@ -47,4 +47,12 @@ class AuthController extends AbstractActionController
                     'error' => $error
                 ));
     }
+    
+    public function logoutAction()
+    {
+        $auth = new AuthenticationService();
+        $auth->setStorage(new SessionStorage());
+        $auth->clearIdentity();
+        return $this->redirect()->toRoute('sonuser-auth');
+    }
 }

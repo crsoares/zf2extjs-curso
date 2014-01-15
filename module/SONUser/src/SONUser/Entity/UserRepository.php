@@ -9,7 +9,7 @@ class UserRepository extends EntityRepository
     public function findByEmailAndPassword($email, $password)
     {
         /** @var $user \SONUser\Entity\User */
-        $user = $this->findByEmail($email);
+        $user = $this->findOneByEmail($email);
         if($user) {
             $hashSenha = $user->encryptPassword($password);
             

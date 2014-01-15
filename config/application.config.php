@@ -9,7 +9,7 @@ return array(
         //'HelloworldMod',
         'DoctrineModule',
         'DoctrineORMModule',
-        //'DoctrineDataFixtureModule',
+        'DoctrineDataFixtureModule',
         //'AssetManager',
         'Estudo'
     ),
