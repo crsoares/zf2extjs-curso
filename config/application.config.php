@@ -11,7 +11,8 @@ return array(
         'DoctrineORMModule',
         'DoctrineDataFixtureModule',
         //'AssetManager',
-        'Estudo'
+        'Estudo',
+        'SONCursos'
     ),
 
     // These are various options for the listeners attached to the ModuleManager

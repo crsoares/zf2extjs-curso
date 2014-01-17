@@ -1,5 +1,7 @@
 <?php
 
+namespace SONCursos;
+
 return array(
     'doctrine' => array(
         'driver' => array(
@@ -13,10 +15,10 @@ return array(
                     __NAMESPACE__ . '\Entity' => __NAMESPACE__ . '_driver'
                 )
             )
+        ),
+        'fixture' => array(
+            'SONCursos_fixture' => __DIR__ . '/../src/SONCursos/Fixture'
         )
     ),
-    'data-fixture' => array(
-        'SONCursos_fixture' => __DIR__ . '/../src/SONCursos/Fixture'
-    )
 );
 
