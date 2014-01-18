@@ -16,6 +16,17 @@ return array(
                     )
                 )
             )
+        ),
+        'eventmanager' => array(
+            'orm_default' => array(
+                'subscribers' => array(
+                    'Gedmo\Tree\TreeListener',
+                    'Gedmo\Timestampable\TimestampableListener',
+                    'Gedmo\Sluggable\SluggableListener',
+                    'Gedmo\Loggable\LoggableListener',
+                    'Gedmo\Sortable\SortableListener',
+                )
+            )
         )
     )
 );

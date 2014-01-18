@@ -1,13 +1,14 @@
-    <?php
+<?php
 
 namespace SONUser\Fixture;
 
 use Doctrine\Common\DataFixtures\AbstractFixture;
-//use Doctrine\Common\DataFixtures\Doctrine;
 use Doctrine\Common\Persistence\ObjectManager;
+use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
+
 use SONUser\Entity\User;
 
-class LoadUser extends AbstractFixture 
+class LoadUser extends AbstractFixture implements OrderedFixtureInterface
 {
     public function load(ObjectManager $manager)
     {
@@ -18,6 +19,7 @@ class LoadUser extends AbstractFixture
              ->setActive(true);
         
         $manager->persist($user);
+        $this->addReference('user1', $user);
         
         $user2 = new User();
         $user2->setNome('Maria')
@@ -26,7 +28,13 @@ class LoadUser extends AbstractFixture
              ->setActive(true);
         
         $manager->persist($user2);
+        $this->addReference('user2', $user2);
         
         $manager->flush();
+    }
+    
+    public function getOrder()
+    {
+        return 1;
     }
 }

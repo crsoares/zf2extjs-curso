@@ -95,9 +95,9 @@ return array(
                     __NAMESPACE__ . '\Entity' => __NAMESPACE__ . '_driver'
                 )
             )
+        ),
+        'fixture' => array(
+            'SONUser_fixture' => __DIR__ . '/../src/SONUser/Fixture'
         )
     ),
-    'data-fixture' => array(
-        'SONUser_fixture' => __DIR__ . '/../src/SONUser/Fixture'
-    )
 );

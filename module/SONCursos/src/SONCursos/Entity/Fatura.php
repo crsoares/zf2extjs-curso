@@ -4,6 +4,7 @@ namespace SONCursos\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * @ORM\Entity
@@ -22,17 +23,17 @@ class Fatura
     protected $id;
     
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="smallint")
      */
     protected $status;
     
     /**
-     * @ORM\Column(type="datetime")
+     * @ORM\Column(type="datetime", nullable=true)
      */
     protected $pagamento;
     
     /**
-     * @ORM\Column(type="decimal", precision=2, scale=1)
+     * @ORM\Column(type="decimal", precision=10, scale=2)
      */
     protected $valor;
     
@@ -52,16 +53,93 @@ class Fatura
     
     /**
      * @ORM\Column(type="datetime")
+     * @Gedmo\Timestampable(on="create")
      */
     protected $created;
     
     /**
      * @ORM\Column(type="datetime")
+     * @Gedmo\Timestampable(on="update")
      */
     protected $updated;
     
     public function __construct()
     {
+        $this->status = self::STATUS_PENDENTE;
         $this->user = new ArrayCollection();
     }
+    
+    public function getId() {
+        return $this->id;
+    }
+
+    public function getStatus() {
+        return $this->status;
+    }
+
+    public function getPagamento() {
+        return $this->pagamento;
+    }
+
+    public function getValor() {
+        return $this->valor;
+    }
+
+    public function getCursos() {
+        return $this->cursos;
+    }
+
+    public function getUser() {
+        return $this->user;
+    }
+
+    public function getCreated() {
+        return $this->created;
+    }
+
+    public function getUpdated() {
+        return $this->updated;
+    }
+
+    public function setId($id) {
+        $this->id = $id;
+        return $this;
+    }
+
+    public function setStatus($status) {
+        $this->status = $status;
+        return $this;
+    }
+
+    public function setPagamento($pagamento) {
+        $this->pagamento = $pagamento;
+        return $this;
+    }
+
+    public function setValor($valor) {
+        $this->valor = $valor;
+        return $this;
+    }
+
+    public function addCursos($cursos) {
+        $this->cursos[] = $cursos;
+        return $this;
+    }
+
+    public function setUser($user) {
+        $this->user = $user;
+        return $this;
+    }
+    
+    public function setCreated($created) {
+        $this->created = $created;
+        return $this;
+    }
+
+    public function setUpdated($updated) {
+        $this->updated = $updated;
+        return $this;
+    }
+
+
 }

@@ -16,6 +16,7 @@
         "hounddog/doctrine-data-fixture-module": "dev-master",
         "zendframework/zftool": "dev-master",
         "rwoverdijk/assetmanager": "*", 
-        "kriswallsmith/assetic": "1.1.*@dev"
+        "kriswallsmith/assetic": "1.1.*@dev",
+        "gedmo/doctrine-extensions": "dev-master"
     }
 }
