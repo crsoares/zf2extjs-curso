@@ -2,6 +2,7 @@
 return array(
     // This should be an array of module namespaces used in the application.
     'modules' => array(
+        'TestAjax',
         'Application',
         'SONUser',
         'Users',
@@ -12,7 +13,7 @@ return array(
         'DoctrineDataFixtureModule',
         //'AssetManager',
         'Estudo',
-        'SONCursos'
+        'SONCursos',
     ),
 
     // These are various options for the listeners attached to the ModuleManager
