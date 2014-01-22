@@ -4,6 +4,7 @@ return array(
     'modules' => array(
         'TestAjax',
         'Application',
+        'JMSSerializerModule',
         'SONUser',
         'Users',
         'Helloworld',
@@ -14,6 +15,7 @@ return array(
         //'AssetManager',
         'Estudo',
         'SONCursos',
+        'SONApi'
     ),
 
     // These are various options for the listeners attached to the ModuleManager

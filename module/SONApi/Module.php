@@ -7,7 +7,7 @@
  * @license   http://framework.zend.com/license/new-bsd New BSD License
  */
 
-namespace SONCursos;
+namespace SONApi;
 
 use Zend\Mvc\ModuleRouteListener;
 use Zend\Mvc\MvcEvent;
@@ -24,29 +24,6 @@ class Module
     public function getConfig()
     {
         return include __DIR__ . '/config/module.config.php';
-    }
-    
-    public function getServiceConfig()
-    {
-        return array(
-            'factories' => array(
-                'SONCursos\Service\Matricula' => function($sm) {
-                    $em = $sm->get('Doctrine\ORM\EntityManager');
-                    return new Service\Matricula($em);
-                },
-                'SONCursos\Service\Fatura' => function($sm) {
-                    $em = $sm->get('Doctrine\ORM\EntityManager');
-                    $matricula = $sm->get('SONCursos\Service\Matricula');
-                    
-                    return new Service\Fatura($em, $matricula);
-                },
-                'SONCursos\Service\Curso' => function($sm) {
-                    $em = $sm->get('Doctrine\ORM\EntityManager');
-                    
-                    return new Service\Curso($em);
-                }
-            )
-        );
     }
 
     public function getAutoloaderConfig()

@@ -17,6 +17,8 @@
         "zendframework/zftool": "dev-master",
         "rwoverdijk/assetmanager": "*", 
         "kriswallsmith/assetic": "1.1.*@dev",
-        "gedmo/doctrine-extensions": "dev-master"
+        "gedmo/doctrine-extensions": "dev-master",
+        "jms/serializer": "0.11.*",
+        "sp/jms-serializer-module": "dev-master"
     }
 }
