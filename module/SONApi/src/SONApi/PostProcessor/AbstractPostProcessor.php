@@ -4,7 +4,7 @@ namespace SONApi\PostProcessor;
 
 use JMS\Serializer\Serializer;
 
-class AbstractPostProcessor
+abstract class AbstractPostProcessor
 {
     protected $serializer;
     
