@@ -300,12 +300,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/data-fixtures.git",
-                "reference": "4a81be009d8437326acfcdd68888d1c5b8e2fb40"
+                "reference": "d5d0f7d9743df904c1e88f48dbc091b91c23d877"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/data-fixtures/zipball/4a81be009d8437326acfcdd68888d1c5b8e2fb40",
-                "reference": "4a81be009d8437326acfcdd68888d1c5b8e2fb40",
+                "url": "https://api.github.com/repos/doctrine/data-fixtures/zipball/d5d0f7d9743df904c1e88f48dbc091b91c23d877",
+                "reference": "d5d0f7d9743df904c1e88f48dbc091b91c23d877",
                 "shasum": ""
             },
             "require": {
@@ -348,7 +348,7 @@
             "keywords": [
                 "database"
             ],
-            "time": "2013-12-02 21:23:23"
+            "time": "2014-01-24 15:18:31"
         },
         {
             "name": "doctrine/dbal",
@@ -422,30 +422,30 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/DoctrineModule.git",
-                "reference": "dba2f4a4807e28b6b52eeab26da897bfdf9e3c92"
+                "reference": "a1be11c78d62b880f4e21ff9a107d6e37bed3133"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/DoctrineModule/zipball/dba2f4a4807e28b6b52eeab26da897bfdf9e3c92",
-                "reference": "dba2f4a4807e28b6b52eeab26da897bfdf9e3c92",
+                "url": "https://api.github.com/repos/doctrine/DoctrineModule/zipball/a1be11c78d62b880f4e21ff9a107d6e37bed3133",
+                "reference": "a1be11c78d62b880f4e21ff9a107d6e37bed3133",
                 "shasum": ""
             },
             "require": {
-                "doctrine/common": ">=2.3,<2.5-dev",
+                "doctrine/common": ">=2.4,<2.6-dev",
                 "php": ">=5.3.3",
-                "symfony/console": "~2.1",
-                "zendframework/zend-authentication": "~2.1",
-                "zendframework/zend-cache": "~2.1",
-                "zendframework/zend-mvc": "~2.1",
-                "zendframework/zend-paginator": "~2.1",
-                "zendframework/zend-servicemanager": "~2.1",
-                "zendframework/zend-stdlib": "~2.1",
-                "zendframework/zend-validator": "~2.1"
+                "symfony/console": "~2.2",
+                "zendframework/zend-authentication": "~2.2",
+                "zendframework/zend-cache": "~2.2",
+                "zendframework/zend-mvc": "~2.2",
+                "zendframework/zend-paginator": "~2.2",
+                "zendframework/zend-servicemanager": "~2.2",
+                "zendframework/zend-stdlib": "~2.2",
+                "zendframework/zend-validator": "~2.2"
             },
             "require-dev": {
                 "phpunit/phpunit": "~3.7",
                 "squizlabs/php_codesniffer": "1.4.*",
-                "zendframework/zendframework": "~2.1"
+                "zendframework/zendframework": "~2.2"
             },
             "suggest": {
                 "doctrine/data-fixtures": "Data Fixtures if you want to generate test data or bootstrap data for your deployments"
@@ -498,7 +498,7 @@
                 "module",
                 "zf2"
             ],
-            "time": "2013-12-20 01:14:12"
+            "time": "2014-01-24 17:30:36"
         },
         {
             "name": "doctrine/doctrine-orm-module",
@@ -506,20 +506,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/DoctrineORMModule.git",
-                "reference": "7dcbaf04ef01895a64a9ab61b00970ca52f261db"
+                "reference": "31a0a0aefd424ca2eaecc0303c4bb0d959b1f2c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/DoctrineORMModule/zipball/7dcbaf04ef01895a64a9ab61b00970ca52f261db",
-                "reference": "7dcbaf04ef01895a64a9ab61b00970ca52f261db",
+                "url": "https://api.github.com/repos/doctrine/DoctrineORMModule/zipball/31a0a0aefd424ca2eaecc0303c4bb0d959b1f2c0",
+                "reference": "31a0a0aefd424ca2eaecc0303c4bb0d959b1f2c0",
                 "shasum": ""
             },
             "require": {
-                "doctrine/dbal": ">=2.4,<2.5-dev",
+                "doctrine/dbal": ">=2.4,<2.6-dev",
                 "doctrine/doctrine-module": "0.8.*",
-                "doctrine/orm": ">=2.4,<2.5-dev",
+                "doctrine/orm": ">=2.4,<2.6-dev",
                 "php": ">=5.3.3",
-                "zendframework/zend-form": ">=2.2",
                 "zendframework/zend-mvc": ">=2.2",
                 "zendframework/zend-servicemanager": ">=2.2",
                 "zendframework/zend-stdlib": ">=2.2"
@@ -534,7 +533,8 @@
             },
             "suggest": {
                 "doctrine/migrations": "doctrine migrations if you want to keep your schema definitions versioned",
-                "zendframework/zend-developer-tools": "zend-developer-tools if you want to profile operations executed by the ORM during development"
+                "zendframework/zend-developer-tools": "zend-developer-tools if you want to profile operations executed by the ORM during development",
+                "zendframework/zend-form": "if you want to use form elements backed by Doctrine"
             },
             "type": "library",
             "extra": {
@@ -581,7 +581,7 @@
                 "orm",
                 "zf2"
             ],
-            "time": "2013-12-30 10:20:12"
+            "time": "2014-01-24 18:13:09"
         },
         {
             "name": "doctrine/inflector",
@@ -697,7 +697,7 @@
                 {
                     "name": "Johannes Schmitt",
                     "email": "schmittjoh@gmail.com",
-                    "homepage": "https://github.com/schmittjoh",
+                    "homepage": "http://jmsyst.com",
                     "role": "Developer of wrapped JMSSerializerBundle"
                 }
             ],
@@ -791,12 +791,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/l3pp4rd/DoctrineExtensions.git",
-                "reference": "35adcaae1a3f50d0d5b73aa50ed8fd28ee35ce54"
+                "reference": "645ba4cd4e7f9aa9f3730567931bea456c4d28c6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/l3pp4rd/DoctrineExtensions/zipball/35adcaae1a3f50d0d5b73aa50ed8fd28ee35ce54",
-                "reference": "35adcaae1a3f50d0d5b73aa50ed8fd28ee35ce54",
+                "url": "https://api.github.com/repos/l3pp4rd/DoctrineExtensions/zipball/645ba4cd4e7f9aa9f3730567931bea456c4d28c6",
+                "reference": "645ba4cd4e7f9aa9f3730567931bea456c4d28c6",
                 "shasum": ""
             },
             "require": {
@@ -863,7 +863,7 @@
                 "tree",
                 "uploadable"
             ],
-            "time": "2014-01-12 16:34:06"
+            "time": "2014-01-23 16:52:56"
         },
         {
             "name": "hounddog/doctrine-data-fixture-module",
@@ -1374,12 +1374,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Console.git",
-                "reference": "62a18a52e66662bc4bf1edf0b9916b97caad3418"
+                "reference": "47e82eadf64a81e0a778c7249c7292987f1bfcff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Console/zipball/62a18a52e66662bc4bf1edf0b9916b97caad3418",
-                "reference": "62a18a52e66662bc4bf1edf0b9916b97caad3418",
+                "url": "https://api.github.com/repos/symfony/Console/zipball/47e82eadf64a81e0a778c7249c7292987f1bfcff",
+                "reference": "47e82eadf64a81e0a778c7249c7292987f1bfcff",
                 "shasum": ""
             },
             "require": {
@@ -1418,7 +1418,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "http://symfony.com",
-            "time": "2014-01-07 15:22:10"
+            "time": "2014-01-24 14:36:35"
         },
         {
             "name": "symfony/process",
@@ -1473,12 +1473,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zf2.git",
-                "reference": "4721eab46be97523e09dceb59b4ce6676fe0ba5e"
+                "reference": "4fe2829353077239aafc9ffe39a15c07bba5b660"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zf2/zipball/4721eab46be97523e09dceb59b4ce6676fe0ba5e",
-                "reference": "4721eab46be97523e09dceb59b4ce6676fe0ba5e",
+                "url": "https://api.github.com/repos/zendframework/zf2/zipball/4fe2829353077239aafc9ffe39a15c07bba5b660",
+                "reference": "4fe2829353077239aafc9ffe39a15c07bba5b660",
                 "shasum": ""
             },
             "require": {
@@ -1580,7 +1580,7 @@
                 "framework",
                 "zf2"
             ],
-            "time": "2014-01-04 11:56:17"
+            "time": "2014-01-17 10:38:18"
         },
         {
             "name": "zendframework/zftool",
