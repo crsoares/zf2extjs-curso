@@ -15,7 +15,8 @@ return array(
     
     'controllers' => array(
         'invokables' => array(
-            'curso' => 'SONApi\Controller\CursoController'
+            'curso' => 'SONApi\Controller\CursoController',
+            'user' => 'SONApi\Controller\UserController'
         )
     ),
     

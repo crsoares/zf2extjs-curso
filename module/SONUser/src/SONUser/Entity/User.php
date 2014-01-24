@@ -7,6 +7,8 @@ use Doctrine\ORM\Mapping as ORM;
 use Zend\Stdlib\Hydrator\ClassMethods;
 use Zend\Crypt\Key\Derivation\Pbkdf2;
 
+use JMS\Serializer\Annotation\Exclude;
+
 /**
  * @ORM\Entity(repositoryClass="SONUser\Entity\UserRepository")
  * @ORM\Table(name="users")
@@ -32,11 +34,13 @@ class User
     
     /**
      * @ORM\Column(type="string")
+     * @Exclude
      */
     protected $password;
     
     /**
      * @ORM\Column(type="string")
+     * @Exclude
      */
     protected $salt;
     
@@ -47,11 +51,13 @@ class User
     
     /**
      * @ORM\Column(type="string", name="activation_key")
+     * @Exclude
      */
     protected $activationKey;
     
     /**
      * @ORM\Column(type="string", name="token")
+     * @Exclude
      */
     protected $token;
     
