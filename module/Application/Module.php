@@ -9,8 +9,10 @@
 
 namespace Application;
 
+use Zend\ModuleManager\ModuleManager;
 use Zend\Mvc\ModuleRouteListener;
 use Zend\Mvc\MvcEvent;
+use Zend\EventManager\Event;
 
 class Module
 {
@@ -19,6 +21,19 @@ class Module
         $eventManager        = $e->getApplication()->getEventManager();
         $moduleRouteListener = new ModuleRouteListener();
         $moduleRouteListener->attach($eventManager);
+    }
+
+    public function init(ModuleManager $moduleManager)
+    {
+        $events = $moduleManager->getEventManager()->getSharedManager();
+        $events->attach('Zend\Mvc\Application', '*', array($this, 'onApplicationEvent'), 100);
+    }
+
+    public function onApplicationEvent(Event $e)
+    {
+        echo $e->getName() . '<br>';
+        echo get_class($e->getTarget());
+        die;
     }
 
     public function getConfig()

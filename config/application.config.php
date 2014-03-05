@@ -13,7 +13,7 @@ return array(
         'DoctrineORMModule',
         'DoctrineDataFixtureModule',
         //'AssetManager',
-        'Estudo',
+        //'Estudo',
         'SONCursos',
         'SONApi'
     ),
