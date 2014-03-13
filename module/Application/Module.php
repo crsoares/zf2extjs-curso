@@ -26,7 +26,7 @@ class Module
     public function init(ModuleManager $moduleManager)
     {
         $events = $moduleManager->getEventManager()->getSharedManager();
-        $events->attach('Zend\Mvc\Application', '*', array($this, 'onApplicationEvent'), 100);
+        //$events->attach('Zend\Mvc\Application', '*', array($this, 'onApplicationEvent'), 100);
     }
 
     public function onApplicationEvent(Event $e)

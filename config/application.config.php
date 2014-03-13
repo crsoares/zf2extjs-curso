@@ -15,7 +15,8 @@ return array(
         //'AssetManager',
         //'Estudo',
         'SONCursos',
-        'SONApi'
+        'SONApi',
+        'Teste',
     ),
 
     // These are various options for the listeners attached to the ModuleManager

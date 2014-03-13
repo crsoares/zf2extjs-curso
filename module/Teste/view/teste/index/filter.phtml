@@ -1,0 +1,9 @@
+<?php
+
+$this->form->setAttribute('action', '/filter');
+$this->form->setAttribute('method', 'post');
+
+$this->form->prepare();
+echo $this->form()->openTag($this->form);
+echo $this->formCollection($this->form);
+echo $this->form()->closeTag();

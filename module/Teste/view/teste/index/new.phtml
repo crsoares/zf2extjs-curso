@@ -1,0 +1,7 @@
+<?php
+
+$this->form->setAttribute('action', '/new');
+$this->form->prepare();
+echo $this->form()->openTag($this->form);
+echo $this->formCollection($this->form);
+echo $this->form()->closeTag();
