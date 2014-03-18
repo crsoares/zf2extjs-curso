@@ -52,7 +52,7 @@ return array(
 	),
 	'service_manager' => array(
 		'abstract_factories' => array(
-			'Zend\Form\FormAbstractServiceFactory'
+			//'Zend\Form\FormAbstractServiceFactory'
 		)
 	),
 	'validators' => array(
