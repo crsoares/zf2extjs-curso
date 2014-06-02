@@ -143,3 +143,59 @@ class Fatura
 
 
 }
+
+
+
+
+public function indexAction()
+    {
+        $entity = $this->getServiceLocator()->get('Doctrine\ORM\EntityManager');
+        //$local = $entity->getRepository('Estoque\Entity\Pessoa')->findOneBy(array('idpessoa' => 40));
+        $local = $entity->getRepository('Estoque\Entity\Pessoa')->fetchAllContasReceber();
+        //echo $local->getPessoaConta()[0]->getContaLocal()->getDescricaolocalcobranca();die;
+        $request  = $this->getRequest();
+        $response = $this->getResponse();
+
+        //if($request->isPost()) {
+
+            $pessoaTable = $this->getContaReceber();
+            $results     = $pessoaTable->fetchAllContasReceber();
+            $paginator   = $pessoaTable->getPaginator($results);
+
+            $paginator->setCurrentPageNumber((int)$this->params()->fromQuery('page', 1));
+            $paginator->setItemCountPerPage($pessoaTable->fetchByCodigointerno());
+
+            $options        = new \ArrayObject();
+            $options['Qtd'] = $pessoaTable->fetchByCodigointerno();
+
+            $formFiltro = $this->getServiceLocator()->get('FormElementManager')->get('Estoque\Form\FiltroProduto');
+            $formFiltro->bind($options);
+            $tableForm  = new TableForm();
+
+            $renderer   = $this->getServiceLocator()->get('ViewRenderer');
+
+            $pagination = $renderer->paginationControl(
+                $paginator,
+                'sliding',
+                array('partials/paginator.phtml', 'Estoque'),
+                array('route' => 'estoque/cadastro')
+            );
+
+            $view_params = array(
+                'formFiltro'   => $formFiltro,
+                'tableForm'    => $tableForm,
+                'pagination'   => $pagination,
+                'pessoaTable'  => $paginator,
+                'contaReceber' => $pessoaTable
+            );
+
+            $viewModel = new ViewModel($view_params);
+            /*$viewModel->setTemplate('estoque/produto/index.phtml');
+            $html      = $renderer->render($viewModel);
+
+            $response->setContent($html);
+
+            return $response;*/
+            return $viewModel;
+        //}
+    }
